@@ -1,0 +1,13 @@
+{{#if posts.length}}
+<section>
+    <div class="row align-items-center">
+        <h2>Hello, {{username}}!</h2>
+    </div>
+    <br>
+    {{#each posts as |post|}}
+        {{> postcard post}}
+    {{/each}}
+
+</section>
+{{/if}}
+<button type="submit" class="btn"><a href="/dashboard/new">Add New Post</a></button>
