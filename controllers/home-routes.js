@@ -5,10 +5,9 @@ const sequelize = require('../config/config');
 // Get all posts ('/')
 router.get('/', async (req, res) => {
     try {
-        // Retrieve all posts from db
+          // Retrieve all posts from db
         const dbPostData = await Post.findAll({ 
-            attributes: ['id', 'title', 'content', 'created_at'],
-            order: [['created_at', 'DESC']],
+            attributes: ['id', 'title', 'content', 'created_at'],           
             include: [
                 {
                     model: Comment,
@@ -23,12 +22,17 @@ router.get('/', async (req, res) => {
                     attributes: ['username'],
                 },
             ],
+            order: [['created_at', 'DESC']],
         })
         // Serialize data retrieved
         const posts = dbPostData.map((post) => post.get({ plain: true }));
         console.log(posts)
         // Respond with template to render along with date retrieved
-        res.render('homepage', { posts, loggedIn: req.session.loggedIn, username: req.session.username });
+        res.render('homepage', 
+            { posts, 
+            loggedIn: req.session.loggedIn, 
+            username: req.session.username,
+            userId: req.session.userId });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -43,7 +47,7 @@ router.get('/post/:id', async (req, res) => {
             include: [
                 {
                     model: Comment,
-                    attributes: ['id', 'comment', 'postId', 'userId', 'created_at'],
+                    attributes: ['id', 'postId', 'userId', 'created_at'],
                     include: {
                       model: User,
                       attributes: ['username'],

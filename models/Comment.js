@@ -13,11 +13,11 @@ class Comment extends Model {}
             },
             comment: {
                 type: DataTypes.STRING,
-                allowNull: false,
+                allowNull: false
             },
             userId: {
                 type: DataTypes.INTEGER,
-                allowNull: false,
+                allowNull : false,
                 references: {
                     model: 'user',
                     key: 'id',
@@ -25,7 +25,7 @@ class Comment extends Model {}
             },
             postId: {
                 type: DataTypes.INTEGER,
-                allowNull: false,
+                allowNull : false,
                 references: {
                     model: 'post',
                     key: 'id',
@@ -34,7 +34,6 @@ class Comment extends Model {}
         },
         {
             sequelize,
-            // timestamps: true,
             freezeTableName: true,
             underscored: true,
             modelName: 'comment',

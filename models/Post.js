@@ -21,7 +21,6 @@ class Post extends Model {}
             },
             userId: {
                 type: DataTypes.INTEGER,
-                allowNull: false,
                 references: {
                     model: 'user',
                     key: 'id',
@@ -30,7 +29,7 @@ class Post extends Model {}
         },
         {
             sequelize,
-            // timestamps: true,
+            timestamps: false,
             freezeTableName: true,
             underscored: true,
             modelName: 'post',
