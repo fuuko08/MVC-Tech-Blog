@@ -4,10 +4,11 @@ const deleteComment = async (event) => {
     event.preventDefault();
 
     const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
-    console.log("what is" + id);
 
     const currentTarget = $(event.currentTarget);
+    console.log(currentTarget + "SEE THISSS ID");
     const commentId = currentTarget.attr('data-id');
+    console.log(commentId + "COMMENT ID")
 
     const response = await fetch(`/api/comment/${commentId}`, {
         method: 'DELETE',

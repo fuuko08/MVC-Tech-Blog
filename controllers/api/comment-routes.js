@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment  } = require('../../models');
+const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get comments ('api/comment')
@@ -58,7 +58,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         });
         return;
       }  
-      res.status(200).json(dbCommentData);
+      res.status(200).json({dbCommentData, success: true});
     } catch (err) {
       res.status(500).json(err);
     }

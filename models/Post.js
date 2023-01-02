@@ -29,7 +29,7 @@ class Post extends Model {}
         },
         {
             sequelize,
-            timestamps: false,
+            timestamps: true,
             freezeTableName: true,
             underscored: true,
             modelName: 'post',
