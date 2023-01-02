@@ -187,6 +187,10 @@ main {
     text-align: center;
 }
 
+.comment {
+  display: contents;
+  
+}
 /* FLEX CONTENT */
 .flex-row {
     display: flex;

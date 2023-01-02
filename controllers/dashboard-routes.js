@@ -36,7 +36,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-// Get one post ('dashboard/edit/:id')
+// Get one post to edit ('dashboard/edit/:id')
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
@@ -64,7 +64,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
         return;
       }
       const post = dbPostData.get({ plain: true });
-      console.log('sending ' + req.session.username);
       res.render('edit-post', { post, loggedIn: true, username: req.session.username });         
     })
     .catch((err) => {

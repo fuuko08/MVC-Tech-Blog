@@ -22,15 +22,4 @@ const editHandler = async (event) => {
     }
 };
 
-// Click on delete post
-const deleteHandler = async () => {
-    await fetch(`/api/post/${id}`, {
-        method: 'DELETE',
-        body: JSON.stringify({ postId: id }),
-        headers: {'Content-Type': 'application/json'},
-    });
-    document.location.replace('/dashboard/');
-};
-
 document.querySelector('.edit-form').addEventListener('submit', editHandler);
-document.querySelector('#delete-btn').addEventListener('click', deleteHandler);

@@ -1,15 +1,16 @@
-<div class="comment">
+
     {{#each this}}
-    <div class="is-flex mb-4" style="max-height: 100px">       
-        <div class="control float-left">
-              <p><strong>{{user.username}}: </strong>{{comment}} on {{formatDate created_at}}</p> 
-        </div>  
+    
+      <div class="flex">       
+          <div class="float-left">
+                <p><strong>{{user.username}}: </strong>{{comment}} on {{formatDate created_at}}</p> 
+          </div>  
 
-        <div class="float-right">  
-          <button class="btn btn-secondary" type="button" data-id={{id}} id="delComBtn"><i class="bi bi-trash"></i>X</button>
-        </div>  
-
-    </div>
+          <div class="float-right">  
+            <button class="btn btn-secondary" type="button" data-id={{id}} id="delComBtn"><i class="bi bi-trash"></i>X</button>
+          </div>  
+      </div>
+   
     {{/each}}  
-</div>
+
 <script src="/js/deletecomment.js"></script>

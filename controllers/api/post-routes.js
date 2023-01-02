@@ -30,9 +30,8 @@ router.put('/:id', withAuth, async (req, res) => {
       if (!updatedPost) {
         res.status(404).json({ message: 'This id has no post' });
         return;
-      }
-  
-      res.json(updatedPost);
+      }  
+      res.status(200).json(updatedPost);
     } catch (err) {
       res.status(500).json(err);
     }
