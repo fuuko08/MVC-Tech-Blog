@@ -6,6 +6,7 @@
 
 I built this Tech Blog for the developers who want to write  and read about technical concepts, recent advancement, and new technologies. Using this blog allows users to share their coding knowdledge with each others by posting articles and commenting on other's posts. 
 This app follows MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication. App is deployed to Heroku.
+<img width="1225" alt="Screenshot 2023-01-03 at 10 07 19 AM" src="https://user-images.githubusercontent.com/108949883/210438736-675167a0-2c0d-4772-8fdc-126665787935.png">
 
 ## Table of Contents
 
