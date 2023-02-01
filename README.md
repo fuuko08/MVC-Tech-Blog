@@ -21,9 +21,9 @@ This application uses React.js as the main technology.
 
 ## Instruction
 
-Live deployed application: 
+Live deployed application: https://techblogpro.herokuapp.com/
 
-To start the app, use the command:
+To start the app, use the command: npm start
 
 ### User Story
 ```
