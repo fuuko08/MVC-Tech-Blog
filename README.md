@@ -8,7 +8,12 @@ Writing about tech can be just as important as making it. Developers spend plent
 
 I built this CMS-Style blog site where developers can publish their blog posts and comment on other developers' posts as well. This app follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
-## Table of Contents
+Live deployed application: https://techblogpro.herokuapp.com/
+
+![techblog](https://user-images.githubusercontent.com/108949883/218810610-87dfc311-c13c-43c3-9889-549bbe866e74.png)
+
+## Table of Contents!
+
 
   * [Instruction](#instruction)
   * [Usage](#usage)
@@ -21,7 +26,7 @@ I built this CMS-Style blog site where developers can publish their blog posts a
 
 ## Instruction
 
-Live deployed application: https://techblogpro.herokuapp.com/
+After downloading to your local device, please run the command ```npm install``` to install packages
 
 To start the app, use the command: ```npm start```
 
